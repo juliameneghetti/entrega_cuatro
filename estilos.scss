@@ -1,0 +1,394 @@
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Spartan', sans-serif;
+
+    button{
+        background-color: transparent;
+        border: transparent;
+    }
+
+    body{
+        background-color: black;
+    }
+}
+
+// VARIABLES
+
+$colorFuente: rgb(226, 115, 160);
+$colorSecundario: white;
+$opacidad: rgba(234, 155, 187, .40);
+$opacidadSecundario: rgba(234, 155, 187, .60);
+
+@mixin tamaño ($width, $height){
+    width: $width;
+    height: $height;
+}
+
+
+// PERSONALIZACIÓN DE BOOTSTRAP
+
+// MENÚ DE NAVEGACIÓN
+
+.bg-dark {
+    background-color: transparent!important;
+}
+
+.navbar-collapse {
+    justify-content:flex-end;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(114, 110, 110);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: $colorFuente;
+}
+
+.nav-link{
+    margin: 20px;
+}
+
+.navbar-collapse img{
+    height: 30px;
+
+    margin: 30px;
+}
+
+.header__logo--tamaño{
+    @include tamaño (auto, 100px);
+
+    padding-left: 20px;
+}
+
+/*BODY*/
+
+/* SECCIÓN HOME */
+
+/*VIDEO HOME*/
+
+.home--video{
+    width: 100%;
+    margin-top: 50px;
+}
+
+/*BOTÓN TIENDA*/
+
+.home__boton--enlace{
+    display: block;
+
+    background-image: url("../MULTIMEDIA/IMG/HOME/mancha.png");
+
+    @include tamaño (350px, 120px);
+
+    margin: 100px auto 0 auto;
+
+    a{
+        text-decoration: none;
+
+        font-size: 20px;
+        color: black;
+    }
+
+    &:hover{
+        animation: headShake;
+        animation-duration: 1s;
+    }
+}
+
+/*SECCIÓN SOBRE MI*/
+
+strong{
+    color: white;
+}
+
+.seccion__sobreMi--flex{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+
+    background-image: url("./MULTIMEDIA/IMG/SOBRE_MI/mancha.png");
+    background-repeat: no-repeat;
+    background-position: right;       
+
+    img{
+        @include tamaño (600px, 900px);
+
+        padding-top: 80px;
+    }
+
+    p{
+        text-align: right;
+        letter-spacing: 2px;
+        word-spacing: 5px;
+        line-height: 25px;
+
+        color: $colorSecundario;
+
+        @include tamaño (400px, 700px);
+
+        padding: 250px 50px;
+    }
+}
+
+/*SECCIÓN NEW IN*/
+
+h1{
+    font-family: 'Wire One', sans-serif;
+
+    font-size: 50px;
+
+    color: $colorSecundario;
+
+    text-align: center;
+
+    margin: 40px 0;
+}
+
+.seccion__newIn--background{
+    background-image: url("../MULTIMEDIA/IMG/NEW_IN/mancha.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.carousel-item{
+    img{
+
+        @include tamaño (auto, 900px);
+
+        margin: 0 auto;
+    }
+
+    h5{
+        color: $colorSecundario;
+    }
+
+    button{
+        margin-top: 20px;
+        padding: 10px 40px;
+
+        color: $colorSecundario;
+     
+        &:hover{
+            background-color: $opacidadSecundario;
+            border-radius: 10px; 
+        }
+    }
+}
+
+/*SECCIÓN TIENDA*/
+
+.seccion__tienda--background{
+    background-image: url("./MULTIMEDIA/IMG/TIENDA/mancha.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.seccion__tienda--flex{
+    display: flex;
+    flex-flow: wrap;
+    justify-content:space-around;
+    text-align: center;
+
+    padding: 50px 0 100px;
+
+    img{
+        @include tamaño (350px, 450px);
+
+        border: 20px solid $opacidad;
+        
+        transition: all 2s;
+
+        &:hover{
+            @include tamaño (400px, 500px);
+        }
+    }
+
+    div{
+        margin-top: 5px;
+        background-color: $opacidad;
+    
+
+        h5{
+            font-size: 14px;
+            color: $colorSecundario;
+
+            padding: 10px 0;
+        }
+
+        button{        
+            color: $colorSecundario;
+
+            padding: 10px 0;
+    
+            &:hover{
+                width: 100%;
+    
+                background-color: $opacidadSecundario;
+            }
+        }
+    }
+}
+
+/*SECCIÓN GALERÍA*/
+
+.seccion__galeria--grid{
+    img{
+        filter: grayscale(100%);
+        transition: all 0.3s; 
+
+        &:hover{
+            filter: grayscale(0%);
+            transition: all 0.3s; 
+        }
+    }   
+
+    video{
+        display: flex;
+       
+        @include tamaño (100%, 100%);
+    }   
+}
+
+/*SECCIÓN CONTACTO*/
+
+.formulario__background--estilo{
+    background-image: url("../MULTIMEDIA/IMG/CONTACTO/mancha.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    .row{
+        margin: 30px;
+    }
+    
+    .form-control{
+        margin-bottom: 40px;
+
+        background-color: $opacidad;
+        border: 1px solid $colorSecundario;
+
+        &:focus{
+            border-color: transparent;
+
+            box-shadow: none;
+        }
+
+        &::placeholder{
+            color: $colorFuente;
+        }
+    }
+
+    .btn{
+        width: 25%;
+
+        color: $colorFuente;
+
+        background-color: $opacidad;
+        border: 1px solid $colorSecundario;
+
+        &:hover{
+            background-color: $opacidadSecundario;
+            color: $colorSecundario;
+        }
+
+        &:focus{
+            box-shadow: none;
+        }
+    }
+}
+
+/*FOOTER*/
+
+footer{
+    display: flex;
+    background-color: rgba(73, 72, 72, .17);
+
+    text-align: center;
+    justify-content: center;
+
+    padding: 20px;
+    margin-top: 100px;
+
+    img{
+        height: 60px;
+
+        margin: 0 30px;
+    }
+
+    a{
+        text-decoration: none;
+
+        color: $colorFuente;
+
+        &:hover{
+            color: $colorFuente;
+        }
+    }
+
+    .footer__boton--redes:hover{
+        animation: swing;
+        animation-duration: 1s;
+    }
+
+    .footer__boton--contacto{
+        font-size: 13px;
+
+        padding-top: 30px;
+    }
+
+    .footer__boton--top{
+        /* position: relative; 
+    
+        left: 430px;*/
+
+        @include tamaño (auto, 40px);
+    }
+}
+
+/*RESPONSIVE*/
+
+@media screen and (min-width: 576px) and (max-width: 767px){
+
+    /*SECCIÓN SOBRE MI*/
+
+    .seccion__sobreMi--flex{
+        justify-content: center;
+
+        background-position: center;
+    
+        img{
+            @include tamaño (350px, auto);
+
+            padding-top: 80px;
+        }
+
+        p{
+            text-align: center;
+
+            width: auto;  
+
+            padding: 50px 20px 0 20px;
+        }
+    }
+
+    /*SECCIÓN NEW IN*/
+
+    .carousel-item{ 
+
+        img{
+            @include tamaño (auto, 400px);
+        }
+
+        h5{
+            font-size: 15px;
+        }
+    }
+}
