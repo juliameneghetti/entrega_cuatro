@@ -18,48 +18,23 @@
     }
 }
 
-// VARIABLES
+/*VARIABLES*/
 
 $colorFuente: rgb(226, 115, 160);
 $colorSecundario: white;
 $opacidad: rgba(234, 155, 187, .40);
 $opacidadSecundario: rgba(234, 155, 187, .60);
 
+/*MAPS*/
+
 @mixin tamaño ($width, $height){
     width: $width;
     height: $height;
 }
 
+/*BODY*/
 
-// PERSONALIZACIÓN DE BOOTSTRAP
-
-// MENÚ DE NAVEGACIÓN
-
-.bg-dark {
-    background-color: transparent!important;
-}
-
-.navbar-collapse {
-    justify-content:flex-end;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: rgb(114, 110, 110);
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: $colorFuente;
-}
-
-.nav-link{
-    margin: 20px;
-}
-
-.navbar-collapse img{
-    height: 30px;
-
-    margin: 30px;
-}
+/*HEADER*/
 
 .header__logo--tamaño{
     @include tamaño (auto, 100px);
@@ -67,7 +42,33 @@ $opacidadSecundario: rgba(234, 155, 187, .60);
     padding-left: 20px;
 }
 
-/*BODY*/
+/*NAV*/
+
+.bg-dark {
+    background-color: transparent!important;
+}
+
+.navbar-collapse {
+    justify-content:flex-end;
+    
+    img{
+        height: 30px;
+    
+        margin: 30px;
+    }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(114, 110, 110);
+
+    &:hover {
+        color: $colorFuente;
+    }
+}
+
+.nav-link{
+    margin: 20px;
+}
 
 /* SECCIÓN HOME */
 
@@ -78,7 +79,7 @@ $opacidadSecundario: rgba(234, 155, 187, .60);
     margin-top: 50px;
 }
 
-/*BOTÓN TIENDA*/
+/*ENLACE TIENDA*/
 
 .home__boton--enlace{
     display: block;
@@ -103,10 +104,6 @@ $opacidadSecundario: rgba(234, 155, 187, .60);
 }
 
 /*SECCIÓN SOBRE MI*/
-
-strong{
-    color: white;
-}
 
 .seccion__sobreMi--flex{
     display: flex;
@@ -215,7 +212,6 @@ h1{
         margin-top: 5px;
         background-color: $opacidad;
     
-
         h5{
             font-size: 14px;
             color: $colorSecundario;

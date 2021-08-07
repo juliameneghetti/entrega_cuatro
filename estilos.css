@@ -11514,6 +11514,17 @@ fieldset:disabled .btn {
   background-color: black;
 }
 
+/*VARIABLES*/
+/*MAPS*/
+/*BODY*/
+/*HEADER*/
+.header__logo--tamaño {
+  width: auto;
+  height: 100px;
+  padding-left: 20px;
+}
+
+/*NAV*/
 .bg-dark {
   background-color: transparent !important;
 }
@@ -11522,6 +11533,11 @@ fieldset:disabled .btn {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.navbar-collapse img {
+  height: 30px;
+  margin: 30px;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -11536,18 +11552,6 @@ fieldset:disabled .btn {
   margin: 20px;
 }
 
-.navbar-collapse img {
-  height: 30px;
-  margin: 30px;
-}
-
-.header__logo--tamaño {
-  width: auto;
-  height: 100px;
-  padding-left: 20px;
-}
-
-/*BODY*/
 /* SECCIÓN HOME */
 /*VIDEO HOME*/
 .home--video {
@@ -11555,7 +11559,7 @@ fieldset:disabled .btn {
   margin-top: 50px;
 }
 
-/*BOTÓN TIENDA*/
+/*ENLACE TIENDA*/
 .home__boton--enlace {
   display: block;
   background-image: url("./MULTIMEDIA/IMG/HOME/mancha.png");
@@ -11578,10 +11582,6 @@ fieldset:disabled .btn {
 }
 
 /*SECCIÓN SOBRE MI*/
-strong {
-  color: white;
-}
-
 .seccion__sobreMi--flex {
   display: -webkit-box;
   display: -ms-flexbox;
