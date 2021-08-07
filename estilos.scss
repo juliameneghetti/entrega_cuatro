@@ -83,7 +83,7 @@ $opacidadSecundario: rgba(234, 155, 187, .60);
 .home__boton--enlace{
     display: block;
 
-    background-image: url("../MULTIMEDIA/IMG/HOME/mancha.png");
+    background-image: url("./MULTIMEDIA/IMG/HOME/mancha.png");
 
     @include tamaño (350px, 120px);
 
@@ -152,7 +152,7 @@ h1{
 }
 
 .seccion__newIn--background{
-    background-image: url("../MULTIMEDIA/IMG/NEW_IN/mancha.png");
+    background-image: url("./MULTIMEDIA/IMG/NEW_IN/mancha.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -260,7 +260,7 @@ h1{
 /*SECCIÓN CONTACTO*/
 
 .formulario__background--estilo{
-    background-image: url("../MULTIMEDIA/IMG/CONTACTO/mancha.png");
+    background-image: url("./MULTIMEDIA/IMG/CONTACTO/mancha.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
