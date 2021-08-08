@@ -11595,26 +11595,34 @@ fieldset:disabled .btn {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-image: url("./MULTIMEDIA/IMG/SOBRE_MI/mancha.png");
-  background-repeat: no-repeat;
-  background-position: right;
 }
 
 .seccion__sobreMi--flex img {
-  width: 600px;
+  width: auto;
   height: 900px;
   padding-top: 80px;
 }
 
-.seccion__sobreMi--flex p {
+.seccion__sobreMi--flex .seccion__sobreMi--container {
+  display: block;
+  position: relative;
+  width: auto;
+  height: 900px;
+}
+
+.seccion__sobreMi--flex .seccion__sobreMi--container p {
+  position: absolute;
+  top: 60%;
+  left: 65%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   text-align: right;
   letter-spacing: 2px;
   word-spacing: 5px;
   line-height: 25px;
   color: white;
   width: 400px;
-  height: 700px;
-  padding: 250px 50px;
+  height: 400px;
 }
 
 /*SECCIÓN NEW IN*/
@@ -11827,14 +11835,6 @@ footer .footer__boton--contacto {
   padding-top: 30px;
 }
 
-footer .footer__boton--top {
-  /* position: relative; 
-    
-        left: 430px;*/
-  width: auto;
-  height: 40px;
-}
-
 /*RESPONSIVE*/
 @media screen and (min-width: 576px) and (max-width: 767px) {
   /*SECCIÓN SOBRE MI*/
@@ -11842,25 +11842,33 @@ footer .footer__boton--top {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-position: center;
   }
   .seccion__sobreMi--flex img {
+    width: 400px;
+    height: auto;
+  }
+  .seccion__sobreMi--flex .seccion__sobreMi--container {
+    width: 400px;
+    height: auto;
+  }
+  .seccion__sobreMi--flex .seccion__sobreMi--container p {
+    top: 30%;
+    left: 50%;
+    text-align: center;
     width: 350px;
     height: auto;
-    padding-top: 80px;
-  }
-  .seccion__sobreMi--flex p {
-    text-align: center;
-    width: auto;
-    padding: 50px 20px 0 20px;
   }
   /*SECCIÓN NEW IN*/
   .carousel-item img {
-    width: auto;
-    height: 300px;
+    width: 450px;
+    height: auto;
   }
   .carousel-item h5, .carousel-item .h5 {
     font-size: 15px;
+  }
+  /*SECCIÓN TIENDA*/
+  .seccion__tienda--flex div {
+    margin-bottom: 20px;
   }
 }
 /*# sourceMappingURL=estilos.css.map */

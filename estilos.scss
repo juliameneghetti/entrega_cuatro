@@ -113,29 +113,38 @@ $opacidadSecundario: rgba(234, 155, 187, .60);
 .seccion__sobreMi--flex{
     display: flex;
     flex-flow: wrap;
-    justify-content: space-between;
-
-    background-image: url("./MULTIMEDIA/IMG/SOBRE_MI/mancha.png");
-    background-repeat: no-repeat;
-    background-position: right;       
+    justify-content: space-between;      
 
     img{
-        @include tamaño (600px, 900px);
+        @include tamaño (auto, 900px);
 
         padding-top: 80px;
     }
 
-    p{
-        text-align: right;
-        letter-spacing: 2px;
-        word-spacing: 5px;
-        line-height: 25px;
+    .seccion__sobreMi--container{
+        display: block;
+       
+        position: relative;
 
-        color: $colorSecundario;
+        @include tamaño (auto, 900px);
 
-        @include tamaño (400px, 700px);
+        p{
+            position: absolute;
 
-        padding: 250px 50px;
+            top: 60%;
+            left: 65%;
+            transform: translate(-50%, -50%);
+
+
+            text-align: right;
+            letter-spacing: 2px;
+            word-spacing: 5px;
+            line-height: 25px;
+
+            color: $colorSecundario;
+
+            @include tamaño (400px, 400px);
+        }
     }
 }
 
@@ -344,14 +353,6 @@ footer{
 
         padding-top: 30px;
     }
-
-    .footer__boton--top{
-        /* position: relative; 
-    
-        left: 430px;*/
-
-        @include tamaño (auto, 40px);
-    }
 }
 
 /*RESPONSIVE*/
@@ -361,22 +362,24 @@ footer{
     /*SECCIÓN SOBRE MI*/
 
     .seccion__sobreMi--flex{
-        justify-content: center;
-
-        background-position: center;
+      
+        justify-content: center;      
     
         img{
-            @include tamaño (350px, auto);
-
-            padding-top: 80px;
+            @include tamaño (400px, auto);
         }
+    
+        .seccion__sobreMi--container{
+            @include tamaño (400px, auto);
+           
+            p{
+                top: 30%;
+                left: 50%;
+              
+                text-align: center;
 
-        p{
-            text-align: center;
-
-            width: auto;  
-
-            padding: 50px 20px 0 20px;
+                @include tamaño (350px, auto);
+            }
         }
     }
 
@@ -385,11 +388,19 @@ footer{
     .carousel-item{ 
 
         img{
-            @include tamaño (auto, 300px);
+            @include tamaño (450px, auto);
         }
 
         h5{
             font-size: 15px;
+        }
+    }
+
+    /*SECCIÓN TIENDA*/
+
+    .seccion__tienda--flex{
+        div{
+            margin-bottom: 20px;
         }
     }
 }
