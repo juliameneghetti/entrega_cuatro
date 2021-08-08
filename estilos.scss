@@ -385,7 +385,7 @@ footer{
     .carousel-item{ 
 
         img{
-            @include tamaño (auto, 400px);
+            @include tamaño (auto, 300px);
         }
 
         h5{
