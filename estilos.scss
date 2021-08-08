@@ -83,11 +83,11 @@ $opacidadSecundario: rgba(234, 155, 187, .60);
 
 .home__boton--enlace{
     display: block;
-
-    background-image: url("./MULTIMEDIA/IMG/HOME/mancha.png");
-
-    @include tamaño (350px, 120px);
-
+    
+    position: relative;
+    
+    text-align: center;
+    
     margin: 100px auto 0 auto;
 
     a{
@@ -95,6 +95,11 @@ $opacidadSecundario: rgba(234, 155, 187, .60);
 
         font-size: 20px;
         color: black;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     &:hover{

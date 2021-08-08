@@ -11562,9 +11562,8 @@ fieldset:disabled .btn {
 /*ENLACE TIENDA*/
 .home__boton--enlace {
   display: block;
-  background-image: url("./MULTIMEDIA/IMG/HOME/mancha.png");
-  width: 350px;
-  height: 120px;
+  position: relative;
+  text-align: center;
   margin: 100px auto 0 auto;
 }
 
@@ -11572,6 +11571,11 @@ fieldset:disabled .btn {
   text-decoration: none;
   font-size: 20px;
   color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .home__boton--enlace:hover {
